@@ -6,7 +6,7 @@ abstract class LogWriter {
 
   void write(
     LogLevel level,
-    String message,
+    Object message,
     String tag,
     Object? error,
     StackTrace? stackTrace,
@@ -23,7 +23,7 @@ class DefaultLogWriter extends LogWriter {
   @override
   void write(
     LogLevel level,
-    String message,
+    Object message,
     String tag,
     Object? error,
     StackTrace? stackTrace,

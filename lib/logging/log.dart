@@ -20,7 +20,7 @@ class Log {
   static final shared = Log();
 
   void d(
-    String message, {
+    Object message, {
     String tag = '',
     Object? error,
     StackTrace? stackTrace,
@@ -29,7 +29,7 @@ class Log {
   }
 
   void i(
-    String message, {
+    Object message, {
     String tag = '',
     Object? error,
     StackTrace? stackTrace,
@@ -38,7 +38,7 @@ class Log {
   }
 
   void w(
-    String message, {
+    Object message, {
     String tag = '',
     Object? error,
     StackTrace? stackTrace,
@@ -47,7 +47,7 @@ class Log {
   }
 
   void e(
-    String message, {
+    Object message, {
     String tag = '',
     Object? error,
     StackTrace? stackTrace,
@@ -55,7 +55,7 @@ class Log {
     _prettyPrint(LogLevel.error, message, tag, error, stackTrace);
   }
 
-  void _prettyPrint(LogLevel level, String message, String tag, Object? error,
+  void _prettyPrint(LogLevel level, Object message, String tag, Object? error,
       StackTrace? stackTrace) {
     final filter = this.filter ?? DefaultLogFilter.instance;
     if (!filter.shouldPrint(level, message, tag, error, stackTrace)) {

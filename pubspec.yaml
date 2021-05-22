@@ -1,6 +1,6 @@
 name: swifty_gimo
 description: Flutter package that contains useful utilities & widgets
-version: 0.0.1
+version: 0.0.1+1
 repository: https://github.com/SKKbySSK/swifty_gimo
 
 environment:

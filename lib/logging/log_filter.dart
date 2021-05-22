@@ -6,7 +6,7 @@ abstract class LogFilter {
 
   bool shouldPrint(
     LogLevel level,
-    String message,
+    Object message,
     String tag,
     Object? error,
     StackTrace? stackTrace,
@@ -23,7 +23,7 @@ class DefaultLogFilter extends LogFilter {
   @override
   bool shouldPrint(
     LogLevel level,
-    String message,
+    Object message,
     String tag,
     Object? error,
     StackTrace? stackTrace,
